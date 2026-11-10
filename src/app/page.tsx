@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 
-const headlineFirst = "Building practical";
-const headlineSecond = "web apps for real needs";
+const headlineFirst = "Lamia";
+const headlineSecond = "web developer";
 
 const projects = [
   {
@@ -271,12 +271,12 @@ export default function Home() {
             <button className="burger a" type="button" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}><span /></button>
           </nav>
 
-          <h1 className="h1" aria-label="Building practical web apps for real needs">
+          <h1 className="h1" aria-label="Lamia, aspiring AI-driven full-stack web developer">
             <span className="headline-row serif" aria-hidden="true">{Array.from(headlineFirst).map((char, index) => <span className="ch" style={{ "--i": index } as CSSProperties} key={`${char}-${index}`}>{char}</span>)}</span>
             <span className="headline-row" aria-hidden="true">{Array.from(headlineSecond).map((char, index) => <span className="ch" style={{ "--i": index + headlineFirst.length } as CSSProperties} key={`${char}-${index}`}>{char}</span>)}</span>
           </h1>
           <div className="copy">
-            <p className="lede a">Aspiring AI-driven full-stack developer, learning by building practical web applications and growing toward Python backend and AI integration.</p>
+            <p className="lede a">Aspiring AI-driven full-stack developer, building practical web projects and growing into Python backend engineering and AI integration.</p>
             <a className="cta a" href="#projects"><Dots /><span>Explore my work</span></a>
           </div>
 
@@ -310,7 +310,18 @@ export default function Home() {
           <div className="project-grid">{projects.map((project, index) => <article className="project-card" key={project.number}><button type="button" className="project-image" onClick={() => setSelectedProject(index)} aria-label={`View details for ${project.name}`}><img src={project.image} alt="Project preview" decoding="async" /><span>{project.number}</span></button><div className="project-meta"><div><small>{project.category}</small><h3>{project.name}</h3></div><button className="details-button" type="button" onClick={() => setSelectedProject(index)}>View details <span aria-hidden="true">↗</span></button></div></article>)}</div>
         </section>
 
-        <section className="content-section contact-section" id="contact"><p className="eyebrow">Get in touch</p><div className="contact-row"><h2>Have a good idea?<br /><em>Let&apos;s make it real.</em></h2><div className="contact-links"><div>Email <span>Share an email address to add it</span></div><div>Phone <span>Share a phone number to add it</span></div><a href="https://www.linkedin.com/in/lamia-akter-sunjida-b92b66346/" target="_blank" rel="noreferrer">LinkedIn <span>Connect with Lamia ↗</span></a><a href="https://github.com/lamia96588-source" target="_blank" rel="noreferrer">GitHub <span>View GitHub profile ↗</span></a></div></div></section>
+        <section className="content-section contact-section" id="contact">
+          <p className="eyebrow">Open to opportunities · collaborations</p>
+          <div className="contact-row">
+            <div className="contact-intro"><span className="contact-kicker">LET&apos;S CONNECT</span><h2>Have a good idea?<br /><em>Let&apos;s make it real.</em></h2><p>I&apos;m always glad to connect with people building useful things for the web.</p></div>
+            <div className="contact-links">
+              <a className="contact-link-card" href="mailto:lamia96588@gmail.com"><span className="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="3" /><path d="m4 7 8 6 8-6" /></svg></span><span className="contact-link-copy"><small>EMAIL ME</small><strong>lamia96588@gmail.com</strong></span><span className="contact-arrow" aria-hidden="true">↗</span></a>
+              <a className="contact-link-card" href="https://www.linkedin.com/in/lamia-akter-sunjida-b92b66346/" target="_blank" rel="noreferrer"><span className="contact-icon contact-letter" aria-hidden="true">in</span><span className="contact-link-copy"><small>CONNECT ON LINKEDIN</small><strong>Lamia Akter Sunjida</strong></span><span className="contact-arrow" aria-hidden="true">↗</span></a>
+              <a className="contact-link-card" href="https://github.com/lamia96588-source" target="_blank" rel="noreferrer"><span className="contact-icon contact-letter" aria-hidden="true">&lt;/&gt;</span><span className="contact-link-copy"><small>EXPLORE MY CODE</small><strong>GitHub profile</strong></span><span className="contact-arrow" aria-hidden="true">↗</span></a>
+              <p className="contact-phone-note">Phone contact can be added when you share your number.</p>
+            </div>
+          </div>
+        </section>
       </main>
       <footer className="footer"><a className="footer-brand" href="#home"><Mark /> Lamia</a><span>Always learning · always building · <span suppressHydrationWarning>{new Date().getFullYear()}</span></span><a href="#home">Back to top ↑</a></footer>
 
