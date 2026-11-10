@@ -287,14 +287,6 @@ export default function Home() {
           <div className="stat stat-one a"><span className="stat-ring" aria-hidden="true"><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="11" /></svg></span><span><small>Areas of focus</small><b>Web experiences</b></span></div>
           <div className="stat stat-two a"><span className="stat-ring" aria-hidden="true"><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="11" /></svg></span><span><small>Working style</small><b>Thoughtful &amp; curious</b></span></div>
 
-          <a className="teaser-card teaser-one" href="#projects" aria-label="Explore selected projects">
-            <img src="/card1.webp" decoding="async" alt="Abstract details from a project image" />
-            <span className="card-tag">Selected work</span><strong>Practical ideas, built for the web.</strong><span className="card-open"><Dots /></span>
-          </a>
-          <a className="teaser-card teaser-two" href="#projects" aria-label="Browse project details">
-            <img src="/card2.webp" decoding="async" alt="Abstract details from a project image" />
-            <span className="card-tag">Learning in progress</span><strong>Always building, always learning.</strong><span className="card-open"><Dots /></span>
-          </a>
           <div className="scroll-cue" aria-hidden="true"><span>SCROLL</span><i /></div>
         </section>
 
