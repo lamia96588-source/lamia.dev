@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type CSSProperties } from "react";
 
 const headlineFirst = "Lamia";
 const headlineSecond = "web developer";
+const copyrightYear = "2026";
 
 const projects = [
   {
@@ -323,7 +324,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="footer"><a className="footer-brand" href="#home"><Mark /> Lamia</a><span>Always learning · always building · <span suppressHydrationWarning>{new Date().getFullYear()}</span></span><a href="#home">Back to top ↑</a></footer>
+      <footer className="footer"><a className="footer-brand" href="#home"><Mark /> Lamia</a><span>Always learning · always building · <span>{copyrightYear}</span></span><a href="#home">Back to top ↑</a></footer>
 
       {selectedProject !== null && <div className="modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setSelectedProject(null); }}><section className="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button className="modal-close" type="button" onClick={() => setSelectedProject(null)} aria-label="Close project details">×</button><p className="eyebrow">Project {projects[selectedProject].number}</p><h2 id="modal-title">{projects[selectedProject].name}</h2><p>{projects[selectedProject].description}</p><dl><div><dt>Technology</dt><dd>{projects[selectedProject].stack.join(", ")}</dd></div><div><dt>Challenge</dt><dd>{projects[selectedProject].challenge}</dd></div><div><dt>Next steps</dt><dd>{projects[selectedProject].next}</dd></div></dl><div className="modal-links">{projects[selectedProject].liveUrl ? <a href={projects[selectedProject].liveUrl} target="_blank" rel="noreferrer">Live project ↗</a> : <span>Live project link needed</span>}{projects[selectedProject].repoUrl ? <a href={projects[selectedProject].repoUrl} target="_blank" rel="noreferrer">GitHub repository ↗</a> : <span>GitHub link needed</span>}</div></section></div>}
     </>
